@@ -9,6 +9,9 @@
 import Foundation
 import CLibreSSL
 import Core
+#if os(Linux)
+    import CoreFoundation
+#endif
 
 extension String {
     private func newECKey() throws -> OpaquePointer {
